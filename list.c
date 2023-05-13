@@ -1,7 +1,7 @@
 /**
  * Various list operations
  */
- 
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -11,8 +11,8 @@
 
 
 // add a new task to the list of tasks
-void insert(struct node **head, Task *newTask) {
-    // add the new task to the list 
+void insert_task(struct node **head, Task *newTask) {
+    // add the new task to the list
     struct node *newNode = malloc(sizeof(struct node));
 
     newNode->task = newTask;
@@ -21,7 +21,7 @@ void insert(struct node **head, Task *newTask) {
 }
 
 // delete the selected task from the list
-void delete(struct node **head, Task *task) {
+void delete_task(struct node **head, Task *task) {
     struct node *temp;
     struct node *prev;
 
@@ -44,7 +44,7 @@ void delete(struct node **head, Task *task) {
 }
 
 // traverse the list
-void traverse(struct node *head) {
+void traverse_task(struct node *head) {
     struct node *temp;
     temp = head;
 

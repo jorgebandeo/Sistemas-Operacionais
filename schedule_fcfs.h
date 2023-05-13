@@ -1,20 +1,13 @@
-#ifndef FCFS_H_INCLUDED
-#define FCFS_H_INCLUDED
+#ifndef SCHEDULE_FCFS_H
+#define SCHEDULE_FCFS_H
 
-static Node *head = NULL;
-static Node *tail = NULL;
+#include "list.h"
+#include "task.h"
 
-typedef struct task {
-    char *name;
-    int burst;
-} Task;
-
-typedef struct node {
-    Task *task;
-    struct node *next;
-} Node;
-
+// função para adicionar uma tarefa à lista de tarefas
 void add(char *name, int burst);
+
+// função para executar o escalonamento das tarefas
 void schedule();
 
-#endif // FCFS_H_INCLUDED
+#endif /* SCHEDULE_FCFS_H */
