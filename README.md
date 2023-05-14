@@ -1,3 +1,30 @@
+Instruções
+1. Esta avaliação deve ser feita individualmente ou em dupla.
+2. Data de entrega: 16/05/2023 até 8:00. Serão aceitos trabalhos entregues em atraso, com
+desconto de 1,0 ponto por dia de atraso, incluindo final de semana.
+3. Esta avaliação tem por objetivo consolidar o aprendizado sobre escalonamento.
+4. A implementação deverá ser desenvolvida utilizando as bibliotecas e arquivos cedidos. Poderá
+ser usado o equivalente no Windows. O uso de bibliotecas de terceiros deverá ser explicado
+com uma justificativa válida que ficará ao critério do professor aceitar ou não.
+5. Link para os arquivos: Scheduler
+6. O sistema deve ser entregue funcionando corretamente.
+7. Deve ser apresentado um relatório eletrônico em formato PDF (em outro formato é descontado
+1,5 ponto) que contenha:
+a. Identificação do autor e do trabalho.
+b. Enunciado do projeto.
+c. Explicação e contexto da aplicação para compreensão do problema tratado pela
+solução.
+d. Resultados obtidos com as simulações.
+e. Códigos importantes da implementação.
+f. Resultados obtidos com a implementação (tabelas, gráficos e etc).
+g. Análise e discussão sobre os resultados finais.
+8. Deve ser disponibilizado os códigos da implementação juntamente com o relatório (salvo o
+caso da disponibilidade em repositório aberto do aluno, que deve ser fornecido o link). Também
+deve ser apresentado o trabalho em aula para o professor. Na apresentação do trabalho, não é
+necessário utilizar slides, apenas apresentar o código e sua execução (compilar na
+apresentação).
+
+
 # Sistemas-Operacionais
 Desenvolvimento de trabalhos da matéria de Sistemas Operacionais.
 Projeto 1
