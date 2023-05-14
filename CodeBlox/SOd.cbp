@@ -49,6 +49,13 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="schedule_fcfs.h" />
+		<Unit filename="schedule_rr.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="schedule_rr.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="task.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

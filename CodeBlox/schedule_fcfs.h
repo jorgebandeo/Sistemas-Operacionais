@@ -5,7 +5,7 @@
 #include "task.h"
 
 // função para adicionar uma tarefa à lista de tarefas
-void add(char *name, int burst);
+void add(char *name,int priority, int burst);
 
 // função para executar o escalonamento das tarefas
 void schedule();

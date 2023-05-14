@@ -12,9 +12,41 @@
 #include <stdio.h>
 #include "task.h"
 #include "list.h"
-#include "schedule_fcfs.h"
+//#include "schedule_fcfs.h"
+//#include "schedule_rr.h"
 
 #define SIZE    100
+
+
+///////////////////////
+#include "CPU.h"
+int tid_counter = 0;
+struct node *TASK_LIST = NULL;
+void add1(char *name, int priority, int burst) {
+    Task *new_task = malloc(sizeof(Task));
+    new_task->name = name;
+    new_task->tid = ++tid_counter;
+    new_task->priority = priority;
+    new_task->burst = burst;
+    insert_task(&TASK_LIST, new_task);
+}
+void schedule_r() {
+    struct node *temp;
+    while (TASK_LIST != NULL) {
+        temp = TASK_LIST;
+        while (temp != NULL) {
+            if (temp->task->burst > QUANTUM) {
+                run(temp->task, QUANTUM);
+                temp->task->burst -= QUANTUM;
+            } else {
+                run(temp->task, temp->task->burst);
+                delete_task(&TASK_LIST, temp->task);
+            }
+            temp = temp->next;
+        }
+    }
+}
+//////////////////////
 
 char *strsep(char **stringp, const char *delim) {
     char *rv = *stringp;
@@ -45,7 +77,7 @@ int main(int argc, char *argv[])
         burst = atoi(strsep(&temp,","));
 
         // add the task to the scheduler's list of tasks
-        add(name,priority);
+        add1(name,priority,burst);
         free(temp);
 
     }
@@ -53,6 +85,8 @@ int main(int argc, char *argv[])
     fclose(in);
 
     // invoke the scheduler
-    schedule();
+    //schedule();
+    schedule_r();
+
     return 0;
 }
