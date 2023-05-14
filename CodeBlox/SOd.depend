@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1684003336 source:c:\users\jorge\desktop\ddd\cpu.c
+	<stdio.h>
+	"task.h"
+
+1684003336 c:\users\jorge\desktop\ddd\task.h
+
+1684016716 source:c:\users\jorge\desktop\ddd\list.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+	"task.h"
+
+1684018649 c:\users\jorge\desktop\ddd\list.h
+	"task.h"
+
+1684020306 source:c:\users\jorge\desktop\ddd\schedule_fcfs.c
+	<stdlib.h>
+	"schedule_fcfs.h"
+	"CPU.h"
+	"list.h"
+	"task.h"
+
+1684018128 c:\users\jorge\desktop\ddd\schedule_fcfs.h
+	"list.h"
+	"task.h"
+
+1684003336 c:\users\jorge\desktop\ddd\cpu.h
+	"task.h"
+
+1684084297 source:c:\users\jorge\desktop\ddd\driver.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"task.h"
+	"list.h"
+	"schedule_fcfs.h"
+
+1584205420 source:c:\users\jorge\desktop\ddd\main.c
+	<stdio.h>
+	<stdlib.h>
+

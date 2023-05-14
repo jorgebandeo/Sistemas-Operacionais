@@ -37,15 +37,13 @@ int main(int argc, char *argv[])
     int burst;
 
     in = fopen(argv[1],"r");
-    in = fopen("C:\\Users\\jorge\\Desktop\\iiii\\rr-schedule.txt","r");
+    in = fopen("rr-schedule.txt","r");
     while (fgets(task,SIZE,in) != NULL) {
         temp = strdup(task);
         name = strsep(&temp,",");
         priority = atoi(strsep(&temp,","));
         burst = atoi(strsep(&temp,","));
-        printf("Name: %s\n", name);
-        printf("Priority: %d\n", priority);
-        printf("Burst: %d\n", burst);
+
         // add the task to the scheduler's list of tasks
         add(name,priority);
         free(temp);
