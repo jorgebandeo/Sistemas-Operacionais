@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     int burst;
 
     in = fopen(argv[1],"r");
-    in = fopen("C:\\Users\\jorge\\Desktop\\iiii\\rr-schedule.txt","r");
+    in = fopen("Sistemas Operacionais/Trabalho M2/rr-schedule.txt","r");
     while (fgets(task,SIZE,in) != NULL) {
         temp = strdup(task);
         name = strsep(&temp,",");
