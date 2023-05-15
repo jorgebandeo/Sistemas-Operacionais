@@ -48,31 +48,31 @@
 
 1684086643 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\task.h
 
-1684100535 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\driver.c
+1684188746 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\driver.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<stdio.h>
+	"schedule_rr.h"
 	"task.h"
 	"list.h"
 	"schedule_fcfs.h"
-	"schedule_rr.h"
 
-1684099005 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\list.h
+1684186544 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\list.h
 	"task.h"
 
 1684089141 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_fcfs.h
 	"list.h"
 	"task.h"
 
-1684096188 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\list.c
+1684102010 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\list.c
 	<stdlib.h>
 	<stdio.h>
 	<string.h>
 	"list.h"
 	"task.h"
 
-1684099005 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_fcfs.c
+1684102010 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_fcfs.c
 	<stdlib.h>
 	"schedule_fcfs.h"
 	"CPU.h"
@@ -82,7 +82,19 @@
 1684086643 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\cpu.h
 	"task.h"
 
-1684100812 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_rr.h
+1684188747 c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_rr.h
+	"list.h"
+	"task.h"
+
+1684188747 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_rr.c
+	<stdlib.h>
+	"CPU.h"
+	"list.h"
+	"task.h"
+
+1684188974 source:c:\users\mhkov\onedrive\documentos\sistemas operacionais\trabalho_2\escalonadores\sistemas-operacionais\codeblox\schedule_rr_p.c
+	<stdlib.h>
+	"CPU.h"
 	"list.h"
 	"task.h"
 

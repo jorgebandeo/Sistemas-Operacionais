@@ -5,7 +5,7 @@
 #include "task.h"
 
 
-void add(char *name,int priority, int burst);
+void add_r(char *name,int priority, int burst);
 
 void schedule_rr();
 

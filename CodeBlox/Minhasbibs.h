@@ -5,5 +5,6 @@
 #include "task.h"
 #include "schedule_fcfs.h"
 #include "CPU.h"
+#include "schedule_rr.h"
 
 #endif

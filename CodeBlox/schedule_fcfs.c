@@ -5,8 +5,8 @@
 #include "list.h"
 #include "task.h"
 int cont = 0;
-struct node *task_list = NULL; // variável global para armazenar a lista de tarefas
 
+struct node *task_list = NULL; // variável global para armazenar a lista de tarefas
 
 // função para adicionar uma tarefa à lista de tarefas
 void add(char *name,int priority ,int burst)
