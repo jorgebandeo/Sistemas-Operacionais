@@ -21,17 +21,17 @@ void swap(struct node *a, struct node *b) {
 }
 
 
-void sort_by_priority() {
+void sort_by_priority(struct node **head) {
     int swapped;
     struct node *ptr1;
     struct node *lptr = NULL;
 
-    if (TASK_LIST_p == NULL)
+    if (*head == NULL)
         return;
 
     do {
         swapped = 0;
-        ptr1 = TASK_LIST_p;
+        ptr1 = *head;
 
         while (ptr1->next != lptr) {
             if (ptr1->task->priority > ptr1->next->task->priority) {
@@ -49,6 +49,7 @@ void schedule_rr_p() {
     while (TASK_LIST_p != NULL) {
         temp = TASK_LIST_p;
         while (temp != NULL) {
+            sort_by_priority(&temp);
             if (temp->task->burst > QUANTUM) {
                 run(temp->task, QUANTUM);
                 temp->task->burst -= QUANTUM;
@@ -59,6 +60,6 @@ void schedule_rr_p() {
             temp = temp->next;
         }
         // Adicionando a funcionalidade de prioridade
-        sort_by_priority();
+
     }
 }
