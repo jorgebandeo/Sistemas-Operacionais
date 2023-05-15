@@ -35,6 +35,23 @@ char *strsep(char **stringp, const char *delim) {
             *stringp = 0; }
     return rv;
 }
+
+#include <stdio.h>
+
+int menu() {
+    int opcao;
+    do {
+        printf("Selecione uma opção:\n");
+        printf("1. Método FCFS\n");
+        printf("2. Método Round Robin sem prioridade\n");
+        printf("3. Método Round Robin com prioridade\n");
+        scanf("%d", &opcao);
+    } while (opcao < 1 || opcao > 3);
+    return opcao;
+}
+
+
+
 int main(int argc, char *argv[])
 {
     FILE *in;
@@ -45,6 +62,8 @@ int main(int argc, char *argv[])
     int priority;
     int burst;
 
+    int opcao =menu();
+
     in = fopen(argv[1],"r");
     in = fopen("rr-schedule.txt","r");
     while (fgets(task,SIZE,in) != NULL) {
@@ -54,7 +73,14 @@ int main(int argc, char *argv[])
         burst = atoi(strsep(&temp,","));
 
         // add the task to the scheduler's list of tasks
-        add_rp(name,priority,burst);
+        if (opcao == 1){
+            add(name,priority,burst);
+        }else if (opcao == 2){
+            add_r(name,priority,burst);
+        }else{
+            add_rp(name,priority,burst);
+        }
+
         free(temp);
 
     }
@@ -62,9 +88,17 @@ int main(int argc, char *argv[])
     fclose(in);
 
     // invoke the scheduler
-    //schedule();
-    //schedule_rr();
-    schedule_rr_p();
+
+    if (opcao == 1){
+            schedule();
+        }else if (opcao == 2){
+            schedule_rr();
+        }else{
+            schedule_rr_p();
+
+        }
+
+
 
     return 0;
 }
