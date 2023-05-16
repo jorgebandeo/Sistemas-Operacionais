@@ -24,7 +24,10 @@ void schedule_rr() {
                 temp->task->burst -= QUANTUM;
             } else {
                 run(temp->task, temp->task->burst);
+                struct node *next_task = temp->next;
                 delete_task(&TASK_LIST, temp->task);
+                temp = next_task;
+                continue; // Continue diretamente para evitar o avanço de temp
             }
             temp = temp->next;
         }

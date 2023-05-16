@@ -15,11 +15,10 @@ void add_rp(char *name, int priority, int burst) {
     insert_task(&TASK_LIST_p, new_task);
 }
 void swap(struct node *a, struct node *b) {
-    Task *temp = a->task;
+    struct Task *temp = a->task;
     a->task = b->task;
     b->task = temp;
 }
-
 
 void sort_by_priority(struct node **head) {
     int swapped;
@@ -63,3 +62,4 @@ void schedule_rr_p() {
 
     }
 }
+

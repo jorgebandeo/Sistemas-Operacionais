@@ -63,9 +63,11 @@ int main(int argc, char *argv[])
     int burst;
 
     int opcao =menu();
-
-    in = fopen(argv[1],"r");
     in = fopen("rr-schedule.txt","r");
+    if (opcao == 3 ){
+        in = fopen("rr-schedule_pri.txt","r");
+    }
+
     while (fgets(task,SIZE,in) != NULL) {
         temp = strdup(task);
         name = strsep(&temp,",");

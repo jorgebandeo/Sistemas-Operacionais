@@ -4,10 +4,8 @@
 #include "list.h"
 #include "task.h"
 
-// função para adicionar uma tarefa à lista de tarefas
-void add(char *name,int priority, int burst);
 
-// função para executar o escalonamento das tarefas
-void schedule();
+void add(char *name,int priority, int burst);//adicionar uma tarefa à lista de tarefas
+void schedule();//executar o escalonamento das tarefas
 
 #endif /* SCHEDULE_FCFS_H */

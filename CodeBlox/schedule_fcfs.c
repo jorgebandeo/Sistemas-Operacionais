@@ -12,27 +12,56 @@ struct node *task_list = NULL; // variável global para armazenar a lista de tare
 void add(char *name,int priority ,int burst)
 {
     cont += 1;
-    Task *new_task = malloc(sizeof(Task)); // aloca espaço na memória para uma nova Task
-    new_task->name = name; // atribui o valor "exemplo" ao atributo name do novo elemento
-    new_task->tid = cont ; // atribui o valor 1 ao atributo tid do novo elemento
-    new_task->priority = priority; // atribui o valor 2 ao atributo priority do novo elemento
-    new_task->burst = burst; // atribui o valor 10 ao atributo burst do novo elemento
-
+    Task *new_task = malloc(sizeof(Task));
+    new_task->name = name;
+    new_task->tid = cont ;
+    new_task->priority = priority;
+    new_task->burst = burst;
     insert_task(&task_list,new_task );
 }
-
-// função para executar o escalonamento das tarefas
 void schedule()
 {
-    while(task_list != NULL){
-        struct node *anterior = task_list; // variável global para armazenar a lista de tarefas
-        while(anterior->next != NULL){
+    while(task_list != NULL)
+    {
+        /// Encontra o primeiro elemento
+        struct node *anterior = task_list;
+        while(anterior->next != NULL)
+        {
             anterior = anterior->next;
         }
-        while(anterior->task->burst>0){//repete a tarefa até ser concluidada
-            run( anterior->task,  anterior->task->burst);
-            anterior->task->burst = anterior->task->burst - QUANTUM;
+
+        printf("---------------[%s]---------------------\n", anterior->task->name);
+
+        /// Repete até o tempo limite ou até a tarefa ser concluída
+        int cont_slice = 0;
+        while( cont_slice < 30&& anterior->task->burst > 0)
+        {
+            if(anterior->task->burst<QUANTUM){
+                cont_slice += anterior->task->burst;
+            }else{
+                cont_slice += QUANTUM;
+            }
+            /// Executa a tarefa
+            run(anterior->task, cont_slice);
+
+            /// Diminui a quantidade de tempo que a tarefa precisa
+            anterior->task->burst -= QUANTUM ;
+
+            /// Incrementa o contador do slice
+
         }
-        delete_task(&task_list, anterior->task);
+
+        /// Caso a tarefa ainda não tenha sido concluída, move para o final da fila
+        if(anterior->task->burst > 0)
+        {
+            Task *salva = anterior->task;
+            delete_task(&task_list, anterior->task);
+            insert_task(&task_list, salva);
+        }
+        else
+        {
+            /// Se a tarefa foi concluída, remove da fila
+            delete_task(&task_list, anterior->task);
+        }
     }
 }

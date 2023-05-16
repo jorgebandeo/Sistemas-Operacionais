@@ -99,3 +99,60 @@
 	"list.h"
 	"task.h"
 
+1684196100 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\cpu.c
+	<stdio.h>
+	"task.h"
+
+1684191829 c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\task.h
+
+1684197631 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\driver.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	"schedule_rr.h"
+	"task.h"
+	"list.h"
+	"schedule_fcfs.h"
+	<stdio.h>
+
+1684191829 c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\schedule_rr.h
+	"list.h"
+	"task.h"
+
+1684191829 c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\list.h
+	"task.h"
+
+1684194140 c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\schedule_fcfs.h
+	"list.h"
+	"task.h"
+
+1684191829 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\list.c
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	"list.h"
+	"task.h"
+
+1684196939 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\schedule_fcfs.c
+	<stdlib.h>
+	"schedule_fcfs.h"
+	"CPU.h"
+	"list.h"
+	"task.h"
+
+1684191829 c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\cpu.h
+	"task.h"
+
+1684196352 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\schedule_rr.c
+	<stdlib.h>
+	"CPU.h"
+	"list.h"
+	"task.h"
+
+1684197929 source:c:\users\jorge\desktop\univali\sistemas-operacionais\codeblox\schedule_rr_p.c
+	<stdlib.h>
+	"CPU.h"
+	"list.h"
+	"task.h"
+
