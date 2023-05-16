@@ -20,11 +20,6 @@
 #define SIZE    100
 
 
-//////////////////////
-/*
-
-//////////////////////
-*/
 char *strsep(char **stringp, const char *delim) {
     char *rv = *stringp;
     if (rv) {

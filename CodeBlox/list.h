@@ -9,8 +9,8 @@ struct node {
     Task *task;
     struct node *next;
 };
-struct node *hader;
-// insert and delete operations.
+
+
 
 void insert_task(struct node **head, Task *task);
 void delete_task(struct node **head, Task *task);

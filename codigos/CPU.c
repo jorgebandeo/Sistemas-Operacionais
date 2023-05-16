@@ -3,7 +3,6 @@
  */
 
 #include <stdio.h>
-
 #include "task.h"
 
 // run this task for the specified time slice

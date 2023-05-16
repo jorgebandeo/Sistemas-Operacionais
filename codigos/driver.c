@@ -10,11 +10,15 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include "schedule_rr.h"
 #include "task.h"
 #include "list.h"
+
 #include "schedule_fcfs.h"
 
+
 #define SIZE    100
+
 
 char *strsep(char **stringp, const char *delim) {
     char *rv = *stringp;
@@ -26,6 +30,23 @@ char *strsep(char **stringp, const char *delim) {
             *stringp = 0; }
     return rv;
 }
+
+#include <stdio.h>
+
+int menu() {
+    int opcao;
+    do {
+        printf("Selecione uma opção:\n");
+        printf("1. Método FCFS\n");
+        printf("2. Método Round Robin sem prioridade\n");
+        printf("3. Método Round Robin com prioridade\n");
+        scanf("%d", &opcao);
+    } while (opcao < 1 || opcao > 3);
+    return opcao;
+}
+
+
+
 int main(int argc, char *argv[])
 {
     FILE *in;
@@ -36,18 +57,27 @@ int main(int argc, char *argv[])
     int priority;
     int burst;
 
-    in = fopen(argv[1],"r");
-    in = fopen("C:\\Users\\jorge\\Desktop\\iiii\\rr-schedule.txt","r");
+    int opcao =menu();
+    in = fopen("rr-schedule.txt","r");
+    if (opcao == 3 ){
+        in = fopen("rr-schedule_pri.txt","r");
+    }
+
     while (fgets(task,SIZE,in) != NULL) {
         temp = strdup(task);
         name = strsep(&temp,",");
         priority = atoi(strsep(&temp,","));
         burst = atoi(strsep(&temp,","));
-        printf("Name: %s\n", name);
-        printf("Priority: %d\n", priority);
-        printf("Burst: %d\n", burst);
+
         // add the task to the scheduler's list of tasks
-        add(name,priority);
+        if (opcao == 1){
+            add(name,priority,burst);
+        }else if (opcao == 2){
+            add_r(name,priority,burst);
+        }else{
+            add_rp(name,priority,burst);
+        }
+
         free(temp);
 
     }
@@ -55,6 +85,17 @@ int main(int argc, char *argv[])
     fclose(in);
 
     // invoke the scheduler
-    schedule();
+
+    if (opcao == 1){
+            schedule();
+        }else if (opcao == 2){
+            schedule_rr();
+        }else{
+            schedule_rr_p();
+
+        }
+
+
+
     return 0;
 }
