@@ -1,12 +1,9 @@
 {
-  "$schema": "https://jorgebandeo.github.io/Portfolio/schema/project-v1.schema.json",
-  "schemaVersion": 1,
-  "project": {"id":"sistemas-operacionais","name":"Escalonadores de Sistemas Operacionais","subtitle":"Implementação de Round-Robin, prioridade e FCFS","status":"academic"},
-  "categories":["software"],
-  "technologies":["C","Schedulers","Round-Robin","FCFS","Estruturas de Dados"],
+  "$schema":"https://jorgebandeo.github.io/Portfolio/schema/project-v1.schema.json","schemaVersion":1,
+  "project":{"id":"sistemas-operacionais","name":"Escalonadores de Sistemas Operacionais","subtitle":"Implementação de Round-Robin, prioridade e FCFS","status":"academic"},
+  "categories":["software"],"technologies":["C","Schedulers","Round-Robin","FCFS","Estruturas de Dados"],
   "summary":"Projeto acadêmico de Sistemas Operacionais voltado à implementação e comparação de algoritmos de escalonamento de tarefas, incluindo Round-Robin, Round-Robin com prioridade e FCFS.",
   "highlights":["Round-Robin","Escalonamento por prioridade","FCFS","Filas de tarefas"],
-  "media":{"gallery":[]},
-  "links":{"repository":"https://github.com/jorgebandeo/Sistemas-Operacionais"},
-  "portfolio":{"visible":true,"featured":false,"order":130}
+  "caseStudy":{"title":"Implementação prática de políticas de escalonamento","intro":"O projeto transforma conceitos de escalonamento de CPU em implementações manipuláveis, permitindo acompanhar como diferentes políticas escolhem e alternam tarefas.","objective":"Implementar algoritmos clássicos de escalonamento e exercitar estruturas de dados necessárias para representar filas, prioridades e ciclos de execução.","implementation":"As rotinas em C modelam tarefas e filas e aplicam políticas FCFS, Round-Robin e variações com prioridade, permitindo comparar a lógica de seleção e rotação entre processos simulados.","architecture":"Conjunto de tarefas → estrutura de fila/prioridade → política de escalonamento → seleção da próxima tarefa → atualização/rotação da fila.","progress":"Projeto acadêmico concluído como conjunto de implementações de estudo, focado na compreensão do comportamento dos algoritmos em vez de construir um kernel completo.","materials":["C","Estruturas de dados","Filas","Round-Robin","FCFS","Prioridades"],"results":["Implementação de múltiplas políticas de escalonamento","Aplicação prática de filas de tarefas","Comparação conceitual entre políticas preemptivas e por ordem de chegada"]},
+  "media":{"gallery":[]},"links":{"repository":"https://github.com/jorgebandeo/Sistemas-Operacionais"},"portfolio":{"visible":true,"featured":false,"order":130}
 }
