@@ -1,0 +1,12 @@
+{
+  "$schema": "https://jorgebandeo.github.io/Portfolio/schema/project-v1.schema.json",
+  "schemaVersion": 1,
+  "project": {"id":"sistemas-operacionais","name":"Escalonadores de Sistemas Operacionais","subtitle":"Implementação de Round-Robin, prioridade e FCFS","status":"academic"},
+  "categories":["software"],
+  "technologies":["C","Schedulers","Round-Robin","FCFS","Estruturas de Dados"],
+  "summary":"Projeto acadêmico de Sistemas Operacionais voltado à implementação e comparação de algoritmos de escalonamento de tarefas, incluindo Round-Robin, Round-Robin com prioridade e FCFS.",
+  "highlights":["Round-Robin","Escalonamento por prioridade","FCFS","Filas de tarefas"],
+  "media":{"gallery":[]},
+  "links":{"repository":"https://github.com/jorgebandeo/Sistemas-Operacionais"},
+  "portfolio":{"visible":true,"featured":false,"order":130}
+}
